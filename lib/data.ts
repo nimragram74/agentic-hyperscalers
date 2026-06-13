@@ -86,6 +86,7 @@ export function getCertifications(): Certification[] {
     validity_years: Number(r.validity_years) || 0,
     exam_format: r.exam_format,
     popular: r.popular?.toLowerCase() === "true",
+    url: r.url,
   }));
 }
 
@@ -97,7 +98,7 @@ export function getTraining(): Training[] {
     level: r.level,
     duration_hours: Number(r.duration_hours) || 0,
     cost: (r.cost as Training["cost"]) || "Free",
-    url_placeholder: r.url_placeholder,
+    url: r.url,
     rating: Number(r.rating) || 0,
     tags: (r.tags || "").split(";").map((t) => t.trim()).filter(Boolean),
   }));

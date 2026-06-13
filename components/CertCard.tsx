@@ -1,4 +1,4 @@
-import { Award, Clock, DollarSign } from "lucide-react";
+import { Award, Clock, DollarSign, ExternalLink } from "lucide-react";
 import type { Certification } from "@/lib/types";
 import { brandColor, withAlpha, BRAND, providerToId } from "@/lib/brand";
 
@@ -6,11 +6,12 @@ export default function CertCard({ cert }: { cert: Certification }) {
   const id = providerToId(cert.provider);
   const color = brandColor(id);
   return (
-    <article
+    <a
+      href={cert.url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="glass group relative flex flex-col p-5 transition-all duration-300 hover:-translate-y-1"
-      style={{
-        // subtle brand-tinted hover border via box-shadow on hover handled by class
-      }}
+      style={{ borderColor: undefined }}
     >
       <div className="flex items-start justify-between gap-3">
         <div>
@@ -20,8 +21,13 @@ export default function CertCard({ cert }: { cert: Certification }) {
           >
             {BRAND[id]?.glyph} {cert.provider}
           </span>
-          <h3 className="mt-2 font-heading text-base font-semibold leading-snug text-ink-100">
+          <h3 className="mt-2 inline-flex items-start gap-1.5 font-heading text-base font-semibold leading-snug text-ink-100">
             {cert.name}
+            <ExternalLink
+              size={13}
+              className="mt-0.5 shrink-0 text-ink-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+              style={{ color }}
+            />
           </h3>
         </div>
         {cert.popular && (
@@ -68,6 +74,6 @@ export default function CertCard({ cert }: { cert: Certification }) {
           <span className="line-clamp-1">{cert.exam_format.split("(")[0]}</span>
         </div>
       </div>
-    </article>
+    </a>
   );
 }

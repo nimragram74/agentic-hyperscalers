@@ -15,7 +15,10 @@ function TrainingCard({ t }: { t: Training }) {
   const id = providerToId(t.provider);
   const color = brandColor(id);
   return (
-    <article
+    <a
+      href={t.url}
+      target="_blank"
+      rel="noopener noreferrer"
       className="glass group flex flex-col p-5 transition-all duration-300 hover:-translate-y-1"
       style={{ borderLeft: `3px solid ${color}` }}
     >
@@ -68,7 +71,7 @@ function TrainingCard({ t }: { t: Training }) {
           {t.level} <ExternalLink size={11} />
         </span>
       </div>
-    </article>
+    </a>
   );
 }
 

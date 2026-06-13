@@ -27,6 +27,7 @@ export interface Certification {
   validity_years: number;
   exam_format: string;
   popular: boolean;
+  url: string;
 }
 
 export interface Training {
@@ -36,7 +37,7 @@ export interface Training {
   level: string;
   duration_hours: number;
   cost: "Free" | "Paid";
-  url_placeholder: string;
+  url: string;
   rating: number;
   tags: string[];
 }

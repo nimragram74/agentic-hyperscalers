@@ -12,7 +12,13 @@
       "PowerShell(Get-Process -Name node -ErrorAction SilentlyContinue)",
       "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
       "PowerShell(\"killed node\")",
-      "PowerShell(\"cleared .next\")"
+      "PowerShell(\"cleared .next\")",
+      "WebFetch(domain:aws.amazon.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:www.coursera.org)",
+      "PowerShell(git add -A)",
+      "PowerShell(git push origin main 2>&1)",
+      "PowerShell(\"--- push ---\")"
     ]
   }
 }
