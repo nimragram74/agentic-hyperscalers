@@ -1,0 +1,17 @@
+provider,name,code,level,domain,cost_usd,validity_years,exam_format,popular
+Microsoft,Azure AI Fundamentals,AI-900,Fundamentals,AI & ML,99,0,40-60 MCQ (45 min),true
+Microsoft,Azure AI Engineer Associate,AI-102,Associate,AI Engineering,165,1,40-60 MCQ + case study,true
+Microsoft,Azure Data Scientist Associate,DP-100,Associate,Machine Learning,165,1,40-60 MCQ + labs,false
+Microsoft,Azure Developer Associate (AI workloads),AZ-204,Associate,Cloud Development,165,1,40-60 MCQ + case study,false
+Microsoft,Azure Solutions Architect Expert,AZ-305,Expert,Architecture,165,1,40-60 MCQ + design,false
+Google,Professional Machine Learning Engineer,GCP-PMLE,Professional,Machine Learning,200,2,50-60 MCQ (2 hrs),true
+Google,Cloud Digital Leader,GCP-CDL,Foundational,Cloud Strategy,99,3,50-60 MCQ (90 min),true
+Google,Professional Data Engineer,GCP-PDE,Professional,Data Engineering,200,2,50-60 MCQ (2 hrs),false
+Google,Generative AI Leader,GCP-GAIL,Foundational,Generative AI,99,3,50-60 MCQ (90 min),false
+AWS,AWS Certified AI Practitioner,AIF-C01,Foundational,AI & ML,100,3,65 MCQ (90 min),true
+AWS,AWS Certified Machine Learning Engineer Associate,MLA-C01,Associate,ML Engineering,150,3,65 MCQ (130 min),true
+AWS,AWS Certified Machine Learning Specialty,MLS-C01,Specialty,Machine Learning,300,3,65 MCQ (180 min),false
+AWS,AWS Certified Data Engineer Associate,DEA-C01,Associate,Data Engineering,150,3,65 MCQ (130 min),false
+Anthropic,Anthropic Academy — Claude Fundamentals,ACAD-CF,Foundational,Prompt Engineering,0,0,Self-paced modules,true
+Anthropic,Anthropic Academy — Building with Claude API,ACAD-API,Intermediate,AI Development,0,0,Self-paced + projects,false
+Anthropic,Anthropic Academy — Claude for Enterprise,ACAD-ENT,Professional,Enterprise AI,0,0,Coming soon,false

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ms-01",
+    "provider": "microsoft",
+    "headline": "Azure AI Foundry adds agent orchestration for multi-step enterprise workflows",
+    "summary": "New Foundry Agent Service lets teams compose, evaluate, and govern multi-agent systems with built-in tracing and content safety.",
+    "category": "Product",
+    "date": "2026-06-09",
+    "isBreaking": true,
+    "tags": ["Azure AI Foundry", "Agents", "Governance"]
+  },
+  {
+    "id": "ms-02",
+    "provider": "microsoft",
+    "headline": "Copilot Studio opens autonomous agents to all Microsoft 365 tenants",
+    "summary": "Autonomous agents can now trigger from events across Teams, Outlook, and SharePoint, with admin-level guardrails.",
+    "category": "Platform",
+    "date": "2026-06-03",
+    "isBreaking": false,
+    "tags": ["Copilot Studio", "Microsoft 365"]
+  },
+  {
+    "id": "ms-03",
+    "provider": "microsoft",
+    "headline": "Azure OpenAI Service expands fine-tuning to new reasoning models",
+    "summary": "Enterprises can now fine-tune the latest o-series reasoning models with reinforcement fine-tuning in select regions.",
+    "category": "Models",
+    "date": "2026-05-27",
+    "isBreaking": false,
+    "tags": ["Azure OpenAI", "Fine-tuning", "Reasoning"]
+  },
+  {
+    "id": "gcp-01",
+    "provider": "google",
+    "headline": "Gemini 2.5 Pro tops enterprise coding and long-context benchmarks",
+    "summary": "Google's latest Gemini release posts state-of-the-art results on agentic coding and 2M-token retrieval tasks.",
+    "category": "Models",
+    "date": "2026-06-11",
+    "isBreaking": true,
+    "tags": ["Gemini", "Benchmarks", "Long context"]
+  },
+  {
+    "id": "gcp-02",
+    "provider": "google",
+    "headline": "Google Agentspace brings enterprise search and agents into one workspace",
+    "summary": "Agentspace now unifies company knowledge, Gemini agents, and connectors across Drive, Confluence, and Jira.",
+    "category": "Product",
+    "date": "2026-06-05",
+    "isBreaking": false,
+    "tags": ["Agentspace", "Enterprise Search"]
+  },
+  {
+    "id": "gcp-03",
+    "provider": "google",
+    "headline": "Vertex AI adds one-click model evaluation and grounding with Google Search",
+    "summary": "New Vertex tooling lets teams benchmark candidate models and ground responses in live web results out of the box.",
+    "category": "Platform",
+    "date": "2026-05-29",
+    "isBreaking": false,
+    "tags": ["Vertex AI", "Grounding", "Evaluation"]
+  },
+  {
+    "id": "aws-01",
+    "provider": "aws",
+    "headline": "Amazon Bedrock launches unified agent runtime with cross-model handoff",
+    "summary": "Bedrock Agents can now route a single task across multiple foundation models, including Claude and Amazon Nova.",
+    "category": "Product",
+    "date": "2026-06-10",
+    "isBreaking": true,
+    "tags": ["Bedrock", "Agents", "Multi-model"]
+  },
+  {
+    "id": "aws-02",
+    "provider": "aws",
+    "headline": "Amazon Q Developer adds repo-wide autonomous refactoring",
+    "summary": "Q Developer can now plan and execute multi-file refactors and upgrades across an entire codebase with review gates.",
+    "category": "Developer",
+    "date": "2026-06-02",
+    "isBreaking": false,
+    "tags": ["Amazon Q", "Developer", "Refactoring"]
+  },
+  {
+    "id": "aws-03",
+    "provider": "aws",
+    "headline": "SageMaker unifies notebooks, pipelines, and governance in one studio",
+    "summary": "The next-gen SageMaker Studio consolidates data prep, training, and model governance for regulated industries.",
+    "category": "Platform",
+    "date": "2026-05-24",
+    "isBreaking": false,
+    "tags": ["SageMaker", "MLOps", "Governance"]
+  },
+  {
+    "id": "anthropic-01",
+    "provider": "anthropic",
+    "headline": "Claude Opus 4.8 sets new state-of-the-art on agentic coding evaluations",
+    "summary": "Anthropic's flagship Opus 4.8 leads on SWE-bench-style tasks with a 1M-token context option for large repositories.",
+    "category": "Models",
+    "date": "2026-06-12",
+    "isBreaking": true,
+    "tags": ["Claude Opus", "Coding", "1M context"]
+  },
+  {
+    "id": "anthropic-02",
+    "provider": "anthropic",
+    "headline": "Model Context Protocol becomes the de-facto standard for tool integration",
+    "summary": "Major IDEs and cloud platforms ship native MCP support, letting agents connect to tools and data through one open protocol.",
+    "category": "Ecosystem",
+    "date": "2026-06-06",
+    "isBreaking": false,
+    "tags": ["MCP", "Standards", "Agents"]
+  },
+  {
+    "id": "anthropic-03",
+    "provider": "anthropic",
+    "headline": "Anthropic Academy launches free enterprise AI certification track",
+    "summary": "A new structured learning path covers prompting, agents, and safe deployment, with an enterprise certificate coming soon.",
+    "category": "Training",
+    "date": "2026-05-30",
+    "isBreaking": false,
+    "tags": ["Anthropic Academy", "Certification", "Training"]
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "microsoft",
+    "name": "Microsoft Azure AI",
+    "tagline": "Enterprise AI, built into the tools the world already runs on.",
+    "color": "#00BCF2",
+    "founded_ai_year": 2016,
+    "key_products": [
+      "Azure OpenAI Service",
+      "Copilot Studio",
+      "Azure AI Foundry",
+      "Azure Machine Learning",
+      "Azure AI Search",
+      "AI Document Intelligence"
+    ],
+    "strengths": [
+      "Deep Microsoft 365 & GitHub Copilot integration",
+      "Enterprise-grade governance and compliance",
+      "Hybrid cloud with Azure Arc",
+      "Largest enterprise sales & partner network"
+    ],
+    "market_position": "Leader in enterprise AI adoption via the Microsoft ecosystem.",
+    "notable_models": ["GPT-4o (Azure OpenAI)", "Phi-4", "o-series reasoning models"],
+    "employee_count": "228,000+",
+    "pricing_tier": "Premium",
+    "best_for": "Enterprises standardised on Microsoft 365 & GitHub.",
+    "free_training": true,
+    "image": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+  },
+  {
+    "id": "google",
+    "name": "Google Cloud AI",
+    "tagline": "Frontier research, productionised on a planet-scale platform.",
+    "color": "#4285F4",
+    "founded_ai_year": 2017,
+    "key_products": [
+      "Vertex AI",
+      "Gemini API",
+      "Google AI Studio",
+      "NotebookLM",
+      "Google Agentspace",
+      "BigQuery ML"
+    ],
+    "strengths": [
+      "Cutting-edge research from Google DeepMind",
+      "Native multimodality with Gemini",
+      "Industry-leading data & analytics stack",
+      "Strong price-to-performance on TPUs"
+    ],
+    "market_position": "Innovation leader with the deepest AI research lineage.",
+    "notable_models": ["Gemini 2.5 Pro", "Gemini 2.5 Flash", "Imagen 3", "Veo"],
+    "employee_count": "182,000+",
+    "pricing_tier": "Competitive",
+    "best_for": "Data-heavy teams wanting frontier multimodal models.",
+    "free_training": true,
+    "image": "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg"
+  },
+  {
+    "id": "aws",
+    "name": "Amazon AWS AI",
+    "tagline": "Choice and control — the broadest set of AI building blocks.",
+    "color": "#FF9900",
+    "founded_ai_year": 2016,
+    "key_products": [
+      "Amazon Bedrock",
+      "Amazon SageMaker",
+      "Amazon Q",
+      "Amazon Rekognition",
+      "Amazon Comprehend",
+      "Amazon Lex"
+    ],
+    "strengths": [
+      "Largest cloud install base and global regions",
+      "Model choice via Bedrock (multi-vendor)",
+      "Mature MLOps with SageMaker",
+      "Granular security & cost controls"
+    ],
+    "market_position": "Scale leader with the widest service breadth.",
+    "notable_models": ["Amazon Nova", "Claude on Bedrock", "Titan", "Llama on Bedrock"],
+    "employee_count": "1,500,000+",
+    "pricing_tier": "Pay-as-you-go",
+    "best_for": "Organisations already running core workloads on AWS.",
+    "free_training": true,
+    "image": "https://images.pexels.com/photos/1054397/pexels-photo-1054397.jpeg"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic Claude",
+    "tagline": "Frontier intelligence with safety at the core.",
+    "color": "#C4622D",
+    "founded_ai_year": 2021,
+    "key_products": [
+      "Claude API",
+      "Claude.ai Enterprise",
+      "Claude for Teams",
+      "Claude Code",
+      "Model Context Protocol (MCP)",
+      "Anthropic Academy"
+    ],
+    "strengths": [
+      "Best-in-class coding & agentic capability",
+      "Industry-leading large context windows",
+      "Constitutional AI safety approach",
+      "Open MCP standard for tool integration"
+    ],
+    "market_position": "Fastest-growing frontier lab for enterprise & developers.",
+    "notable_models": ["Claude Opus 4.8", "Claude Sonnet 4.6", "Claude Haiku 4.5", "Fable 5"],
+    "employee_count": "2,000+",
+    "pricing_tier": "Premium",
+    "best_for": "Teams building agents, coding tools & safety-critical AI.",
+    "free_training": true,
+    "image": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
+  }
+]
