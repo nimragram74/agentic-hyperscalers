@@ -7,7 +7,12 @@
       "PowerShell(\"---NODE---\")",
       "PowerShell(\"---NPM---\")",
       "PowerShell(\"---GIT---\")",
-      "PowerShell(\"---GH---\")"
+      "PowerShell(\"---GH---\")",
+      "PowerShell(winget install --id GitHub.cli -e --source winget --accept-source-agreements --accept-package-agreements --silent 2>&1)",
+      "PowerShell(Get-Process -Name node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(\"killed node\")",
+      "PowerShell(\"cleared .next\")"
     ]
   }
 }
