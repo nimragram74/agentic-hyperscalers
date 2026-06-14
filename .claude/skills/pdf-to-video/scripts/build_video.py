@@ -180,6 +180,8 @@ def cmd_extract(args):
     else:
         sys.exit(f"Unsupported input: {ext} (use .pdf or .pptx)")
 
+    if getattr(args, "max", 0):
+        slides = slides[: args.max]
     out = {"input": os.path.abspath(args.input), "slides": slides}
     with open(os.path.join(workdir, "slides.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
@@ -243,16 +245,16 @@ def build_segment(ff, workdir, slide_img, wav, dur, caption_text, seg_out, capti
     )
     if captions and caption_text.strip():
         cap_path = os.path.join(workdir, "audio", os.path.basename(seg_out) + ".cap.txt")
-        wrapped = "\n".join(wrap(caption_text.strip(), 64)[:3])
+        wrapped = "\n".join(wrap(caption_text.strip(), 72)[:6])
         with open(cap_path, "w", encoding="utf-8") as f:
             f.write(wrapped)
         rel_cap = cap_path.replace("\\", "/").replace(":", "\\:")
         font = find_font().replace("\\", "/").replace(":", "\\:")
         vf += (
             f",drawtext=fontfile='{font}':textfile='{rel_cap}':reload=0:"
-            f"fontcolor=white:fontsize=40:line_spacing=10:"
-            f"box=1:boxcolor=0x0D1117C0:boxborderw=26:"
-            f"x=(w-text_w)/2:y=h-text_h-72:enable='between(t,0.3,{total:.2f})'"
+            f"fontcolor=white:fontsize=32:line_spacing=9:"
+            f"box=1:boxcolor=0x0D1117C8:boxborderw=24:"
+            f"x=(w-text_w)/2:y=h-text_h-56:enable='between(t,0.3,{total:.2f})'"
         )
     cmd = [
         ff, "-y", "-loop", "1", "-i", slide_img, "-i", wav,
@@ -305,6 +307,7 @@ def main():
     sub = p.add_subparsers(dest="cmd", required=True)
 
     pe = sub.add_parser("extract"); pe.add_argument("input"); pe.add_argument("workdir")
+    pe.add_argument("--max", type=int, default=0, help="limit to first N slides")
     pe.set_defaults(func=cmd_extract)
 
     ps = sub.add_parser("synth"); ps.add_argument("workdir")
