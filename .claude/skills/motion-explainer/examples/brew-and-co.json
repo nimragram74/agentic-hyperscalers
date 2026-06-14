@@ -1,0 +1,68 @@
+{
+  "theme": "warm-editorial",
+  "voice": "Microsoft Zira Desktop",
+  "music": "warm",
+  "scenes": [
+    {
+      "template": "title",
+      "bg": "dark",
+      "eyebrow": "Enterprise AI · Full SDLC Case Study",
+      "lines": [
+        { "text": "From idea to", "style": "normal" },
+        { "text": "a live website", "style": "emph" },
+        { "text": "in a single session.", "style": "muted" }
+      ],
+      "sub": "No agency · No dev team · Just Claude Code",
+      "narration": "What if one person, in a single session, could take a business from a blank page to a live, production website? No agency. No dev team. Just Claude Code."
+    },
+    {
+      "template": "statement",
+      "bg": "light",
+      "eyebrow": "The Brief",
+      "headline": "A real project. ||Zero starting point.||",
+      "chips": ["No codebase", "No designer", "No DevOps engineer"],
+      "footnote": "Only an idea, a reference image, and Claude.",
+      "narration": "Ram's Brew and Company started with nothing. No codebase. No designer. No DevOps engineer. Only an idea, a reference image, and Claude."
+    },
+    {
+      "template": "timeline",
+      "bg": "dark",
+      "eyebrow": "The SDLC Journey",
+      "headline": "Claude drove all five phases.",
+      "nodes": [["01", "Design"], ["02", "Build"], ["03", "Content"], ["04", "Optimise"], ["05", "Deploy"]],
+      "footnote": "Designer · Architect · Engineer · DevOps — one conversation.",
+      "narration": "Claude drove all five phases of the software lifecycle. It designed the brand, architected the pages, built the content pipeline, optimised every asset, and shipped to production, switching roles without missing a beat."
+    },
+    {
+      "template": "stat_grid",
+      "bg": "light",
+      "eyebrow": "By the Numbers",
+      "headline": "The measurable story.",
+      "stats": [
+        { "value": 25, "label": "Menu items" },
+        { "value": 28, "label": "Images to WebP" },
+        { "value": 80, "suffix": "%", "label": "Smaller assets" },
+        { "value": 3, "label": "Bugs self-fixed" },
+        { "prefix": "<", "value": 90, "suffix": "s", "label": "Idea to live URL" },
+        { "value": 0, "label": "External devs" }
+      ],
+      "narration": "The result, by the numbers. Twenty five menu items. Twenty eight images optimised to WebP, around eighty percent smaller. Three bugs fixed with zero human help. Idea to live U-R-L in under ninety seconds. External developers? Zero."
+    },
+    {
+      "template": "chips_grid",
+      "bg": "dark",
+      "headline": "Not a tool. ||A team member.||",
+      "chips": ["Designer", "Architect", "Engineer", "QA", "Content", "DevOps"],
+      "narration": "This was not a tool completing a task. It was a designer, an architect, an engineer, and a DevOps team, all in one conversation."
+    },
+    {
+      "template": "closing",
+      "bg": "dark",
+      "brand": "Ram's Brew & Co",
+      "headline": "The SDLC ||just changed.||",
+      "url": "brew-and-co-ecru.vercel.app",
+      "footer": "Built with Anthropic Claude Code · Next.js · Vercel",
+      "narration": "From idea to live website, in a single session. Ram's Brew and Company. This is what A-I native delivery looks like."
+    }
+  ]
+}
