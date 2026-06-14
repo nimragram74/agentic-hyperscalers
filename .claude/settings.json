@@ -18,7 +18,8 @@
       "WebFetch(domain:www.coursera.org)",
       "PowerShell(git add -A)",
       "PowerShell(git push origin main 2>&1)",
-      "PowerShell(\"--- push ---\")"
+      "PowerShell(\"--- push ---\")",
+      "PowerShell(git ls-files | Where-Object { $_ -notmatch \"^public/|favicon\" } | Sort-Object)"
     ]
   }
 }
