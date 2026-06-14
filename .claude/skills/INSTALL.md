@@ -16,6 +16,20 @@ This finds your Python, installs the dependencies, and copies both skills into
 `%USERPROFILE%\.claude\skills\` (user-level = available in **every** project).
 **Restart Claude Code** afterwards.
 
+## No git? Download the zip
+
+Pre-packaged zips live in [`dist/skills/`](../../dist/skills/):
+- `motion-explainer.zip`
+- `pdf-to-video.zip`
+
+On GitHub, open the file and click **Download raw file**. Then:
+
+1. Unzip it **into** your user-level skills folder so you get `…/.claude/skills/<skill>/`:
+   - Windows: `C:\Users\<you>\.claude\skills\`
+   - macOS/Linux: `~/.claude/skills/`
+2. Install the Python deps (see step 3 below).
+3. Restart Claude Code.
+
 ## Manual path (any OS)
 
 1. **Get the files** — clone the repo, or copy the `motion-explainer` / `pdf-to-video`
