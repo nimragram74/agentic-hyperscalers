@@ -78,7 +78,7 @@ export default function HomePage() {
             The AI Cloud Command Centre
           </div>
           <h1 className="font-heading text-5xl font-bold leading-[1.04] tracking-tight text-ink-100 sm:text-7xl">
-            The Age of{" "}
+            The New Age of{" "}
             <span className="text-gradient">Agentic AI</span>
           </h1>
           <p className="mt-5 max-w-2xl font-body text-lg leading-relaxed text-ink-300">
