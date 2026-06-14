@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant U as User
+    participant X as CertExplorer (state)
+    participant G as Card grid
+    U->>X: click "AWS" + "Associate"
+    X->>X: setProvider / setLevel (React state)
+    X->>X: derive filtered list (AND)
+    X-->>G: re-render matching CertCards + count
+    U->>X: click a card
+    X-->>U: open official URL in new tab

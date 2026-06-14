@@ -1,0 +1,20 @@
+graph LR
+    subgraph Tokens["Design tokens (tailwind.config.ts + brand.ts)"]
+        S["Surfaces<br/>#0D1117 / #161B22 / #1C2333"]
+        A["Accent<br/>#00D4FF"]
+        BR["Brand<br/>MS #00BCF2 · G #4285F4<br/>AWS #FF9900 · Anthropic #C4622D"]
+        TY["Type<br/>Space Grotesk / Inter"]
+        FX["Effects<br/>glass · grid-texture · glow · keyframes"]
+    end
+    subgraph Primitives["Reusable utilities (globals.css)"]
+        GL[".glass"]
+        GT[".grid-texture"]
+        GR[".glow-radial"]
+        PB[".pill-btn"]
+        EB[".eyebrow"]
+    end
+    subgraph Components["UI components"]
+        ALL["All cards, tiles, tabs,<br/>tables, hero, nav"]
+    end
+    Tokens --> Primitives --> Components
+    GuardRail["design-enforcer agent<br/>audits & fixes drift"] -.enforces.-> Components

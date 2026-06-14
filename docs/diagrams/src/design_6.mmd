@@ -1,0 +1,54 @@
+erDiagram
+    HYPERSCALER ||--o{ CERTIFICATION : "offers (by provider)"
+    HYPERSCALER ||--o{ TRAINING : "offers (by provider)"
+    HYPERSCALER ||--o{ NEWS : "publishes (by provider)"
+
+    HYPERSCALER {
+        string id PK
+        string name
+        string tagline
+        string color
+        int founded_ai_year
+        string[] key_products
+        string[] strengths
+        string market_position
+        string[] notable_models
+        string employee_count
+        string pricing_tier
+        string best_for
+        bool free_training
+        string image
+    }
+    CERTIFICATION {
+        string provider FK
+        string name
+        string code
+        string level
+        string domain
+        number cost_usd
+        number validity_years
+        string exam_format
+        bool popular
+        string url
+    }
+    TRAINING {
+        string provider FK
+        string course_name
+        string platform
+        string level
+        number duration_hours
+        enum cost
+        string url
+        number rating
+        string[] tags
+    }
+    NEWS {
+        string id PK
+        string provider FK
+        string headline
+        string summary
+        string category
+        date date
+        bool isBreaking
+        string[] tags
+    }

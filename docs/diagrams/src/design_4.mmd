@@ -1,0 +1,13 @@
+flowchart LR
+    subgraph ServerSide["Server / build-time"]
+        direction TB
+        FS["data/*.csv|json"] --> P["lib/data.ts parser"]
+        P --> RSC["Route Server Components<br/>(fetch + shape data)"]
+    end
+    subgraph ClientSide["Browser / runtime"]
+        direction TB
+        IC["Interactive components<br/>filters, tabs, animations"]
+    end
+    RSC -->|"typed props (serialised)"| IC
+    style ServerSide fill:#0d1117,stroke:#00D4FF,color:#E6EDF3
+    style ClientSide fill:#0d1117,stroke:#FF9900,color:#E6EDF3

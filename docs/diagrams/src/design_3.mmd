@@ -1,0 +1,59 @@
+graph TD
+    subgraph AppRouter["app/ — routes (Server Components)"]
+        L["layout.tsx<br/>(fonts, Navbar, Footer, PageTransition)"]
+        H["page.tsx — /"]
+        HY["hyperscalers/page.tsx"]
+        CE["certifications/page.tsx"]
+        TR["training/page.tsx"]
+        NW["news/page.tsx"]
+        CP["compare/page.tsx"]
+    end
+
+    subgraph Lib["lib/ — data & domain (server-safe / pure)"]
+        D["data.ts<br/>(fs read + CSV/JSON parse)"]
+        T["types.ts<br/>(domain contracts)"]
+        B["brand.ts<br/>(colours, providerToId, helpers)"]
+    end
+
+    subgraph DataFiles["data/"]
+        C1["certifications.csv"]
+        C2["training.csv"]
+        C3["hyperscalers.json"]
+        C4["news.json"]
+    end
+
+    subgraph Client["components/ — Client Components ('use client')"]
+        NAV["Navbar"]
+        FOOT["Footer"]
+        PT["PageTransition"]
+        AG["AmbientGlow"]
+        CD["CommandDeck"]
+        CU["CountUp"]
+        RV["Reveal"]
+        HC["HyperscalerCard"]
+        HT["HyperscalerTabs"]
+        CX["CertExplorer"]
+        TX["TrainingExplorer"]
+        NX["NewsExplorer"]
+        CT["CompareTable"]
+    end
+
+    subgraph Shared["components/ — presentational"]
+        SH["SectionHeading"]
+        NC["NewsCard"]
+        CC["CertCard"]
+    end
+
+    D --> T
+    D --> B
+    D --> C1 & C2 & C3 & C4
+
+    L --> NAV & FOOT & PT
+    H --> D
+    H --> AG & CD & CU & RV & HC & NC & CC & SH
+    HY --> D --> HT
+    CE --> D --> CX --> CC
+    TR --> D --> TX
+    NW --> D --> NX --> NC
+    CP --> D --> CT
+    B --> Client & Shared

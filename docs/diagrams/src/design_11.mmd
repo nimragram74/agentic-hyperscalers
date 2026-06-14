@@ -1,0 +1,4 @@
+flowchart LR
+    DEV["Local dev<br/>npm run dev"] -->|commit| MAIN["GitHub main"]
+    MAIN -->|auto webhook| PRE["Vercel Preview<br/>(per push/PR)"]
+    MAIN -->|production alias| PROD["Vercel Production<br/>agentic-hyperscalers.vercel.app"]

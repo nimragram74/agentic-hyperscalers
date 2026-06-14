@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant CI as Vercel Build
+    participant N as next build
+    participant FS as data/*.csv|json
+    participant R as Route Server Components
+    CI->>N: install + build
+    N->>R: render each route
+    R->>FS: getCertifications() / getNews() ...
+    FS-->>R: parsed, typed objects
+    R-->>N: static HTML per route
+    N-->>CI: immutable static deploy

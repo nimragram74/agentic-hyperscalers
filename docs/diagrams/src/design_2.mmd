@@ -1,0 +1,26 @@
+graph LR
+    subgraph Dev["Developer workstation"]
+        SRC["Source code<br/>app / components / lib"]
+        DATA["Data files<br/>CSV + JSON"]
+    end
+
+    subgraph GH["GitHub — nimragram74/agentic-hyperscalers"]
+        REPO["main branch"]
+    end
+
+    subgraph Vercel["Vercel Platform"]
+        BUILD["Build pipeline<br/>next build (SSG)"]
+        EDGE["Global Edge / CDN<br/>static HTML + JS + RSC payloads"]
+    end
+
+    subgraph Client["End-user browser"]
+        HTML["Pre-rendered HTML"]
+        HYD["Hydrated client components"]
+    end
+
+    SRC & DATA -->|git push| REPO
+    REPO -->|webhook trigger| BUILD
+    BUILD -->|immutable deploy| EDGE
+    EDGE -->|HTTPS| HTML
+    HTML --> HYD
+    HYD -->|images| PX["Pexels CDN"]

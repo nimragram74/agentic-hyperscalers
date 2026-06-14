@@ -1,0 +1,20 @@
+graph TB
+    subgraph Users
+        U1["Enterprise Architect"]
+        U2["L&D / Capability Lead"]
+        U3["Engineering Manager"]
+        U4["Leadership Reviewer"]
+    end
+
+    AHS["<b>Agentic Hyper Scalers</b><br/>The AI Cloud Command Centre<br/>(Next.js portal)"]
+
+    subgraph External["External systems"]
+        PX["Pexels<br/>(image CDN)"]
+        OFF["Official provider pages<br/>Microsoft Learn · Google Cloud<br/>AWS · Anthropic · Coursera · etc."]
+        GF["Google Fonts<br/>(build-time)"]
+    end
+
+    U1 & U2 & U3 & U4 -->|"HTTPS (browser)"| AHS
+    AHS -->|"optimised images"| PX
+    AHS -->|"outbound deep links (new tab)"| OFF
+    AHS -.->|"fetched at build only"| GF

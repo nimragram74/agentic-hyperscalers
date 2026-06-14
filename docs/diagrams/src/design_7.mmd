@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant U as Browser
+    participant E as Vercel Edge/CDN
+    participant H as Pre-rendered HTML/JS
+    U->>E: GET /certifications
+    E-->>U: Static HTML (pre-rendered at build) + RSC payload
+    U->>U: Hydrate CertExplorer (client component)
+    U->>E: Lazy-load JS chunks + Pexels images
+    E-->>U: Assets (cached at edge)
+    Note over U: Fully interactive — filtering is 100% client-side

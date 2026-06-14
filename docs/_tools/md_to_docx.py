@@ -146,6 +146,32 @@ def add_table(doc, rows):
     doc.add_paragraph()
 
 
+def png_size_px(path):
+    """Read width/height (px) from a PNG IHDR without external libs."""
+    with open(path, 'rb') as f:
+        data = f.read(24)
+    w = int.from_bytes(data[16:20], 'big')
+    h = int.from_bytes(data[20:24], 'big')
+    return w, h
+
+
+def add_diagram_image(doc, path, caption_text):
+    cap = doc.add_paragraph()
+    cr = cap.add_run(caption_text)
+    cr.italic = True; cr.font.size = Pt(9); cr.font.color.rgb = RGBColor(0x6B, 0x76, 0x85)
+
+    w_px, h_px = png_size_px(path)
+    w_in = max(w_px / 96.0, 0.5)
+    h_in = max(h_px / 96.0, 0.5)
+    MAX_W, MAX_H = 6.3, 8.2
+    scale = min(MAX_W / w_in, MAX_H / h_in, 1.0)
+
+    p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = p.add_run()
+    run.add_picture(path, width=Inches(w_in * scale))
+    doc.add_paragraph()
+
+
 def add_code_block(doc, lines, lang):
     if lang == 'mermaid':
         cap = doc.add_paragraph()
@@ -171,9 +197,11 @@ def is_separator(line):
     return bool(re.match(r'^\s*\|?\s*:?-{2,}.*\|', line)) and set(line.strip()) <= set('|-: ')
 
 
-def convert(md_path, docx_path, title, subtitle, footer_label):
+def convert(md_path, docx_path, title, subtitle, footer_label, doc_key='', diagrams_dir=''):
+    import os as _os
     with open(md_path, 'r', encoding='utf-8') as f:
         lines = f.read().replace('\r\n', '\n').split('\n')
+    mermaid_count = 0
 
     doc = Document()
     style_base(doc)
@@ -222,7 +250,15 @@ def convert(md_path, docx_path, title, subtitle, footer_label):
                 block.append(lines[i])
                 i += 1
             i += 1
-            add_code_block(doc, block, lang)
+            if lang.startswith('mermaid'):
+                mermaid_count += 1
+                png = _os.path.join(diagrams_dir, f'{doc_key}_{mermaid_count}.png') if diagrams_dir else ''
+                if png and _os.path.exists(png):
+                    add_diagram_image(doc, png, 'Figure — architecture diagram:')
+                else:
+                    add_code_block(doc, block, lang)
+            else:
+                add_code_block(doc, block, lang)
             continue
 
         # Table
@@ -295,4 +331,6 @@ def convert(md_path, docx_path, title, subtitle, footer_label):
 
 
 if __name__ == '__main__':
-    convert(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+    doc_key = sys.argv[6] if len(sys.argv) > 6 else ''
+    diagrams_dir = sys.argv[7] if len(sys.argv) > 7 else ''
+    convert(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], doc_key, diagrams_dir)
